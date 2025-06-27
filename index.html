@@ -17,8 +17,16 @@
     header {
       background-color: #6a1b9a;
       color: white;
-      padding: 2rem;
+      padding: 3rem 2rem 2rem;
       text-align: center;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    header p.tagline {
+      font-size: 1.2rem;
+      font-weight: 400;
     }
     nav {
       background-color: #4a148c;
@@ -44,7 +52,9 @@
     }
     .testimonial {
       font-style: italic;
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
+      border-left: 4px solid #6a1b9a;
+      padding-left: 1rem;
     }
     .testimonial strong {
       display: block;
@@ -76,17 +86,30 @@
       cursor: pointer;
       font-weight: 600;
     }
+    .contact p.note {
+      font-size: 0.9rem;
+      color: #666;
+    }
     footer {
       text-align: center;
       padding: 1rem;
       background-color: #eee;
+    }
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      nav a {
+        display: block;
+        margin: 10px 0;
+      }
     }
   </style>
 </head>
 <body>
   <header>
     <h1>Elevate with Flo</h1>
-    <p>Helping Women Build Strength, Confidence, and Nutritional Balance</p>
+    <p class="tagline">Personalised Coaching for Real Women Ready to Thrive</p>
   </header>
 
   <nav>
@@ -145,6 +168,7 @@
       <textarea name="message" placeholder="Your Message or Query" required></textarea>
       <button type="submit">Submit</button>
     </form>
+    <p class="note">I personally respond to every message within 24 hours.</p>
   </section>
 
   <section id="blog" class="blog">

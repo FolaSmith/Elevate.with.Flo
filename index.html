@@ -5,66 +5,189 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Elevate with Flo - Fitness & Nutrition Coaching" />
   <title>Elevate with Flo</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
   <style>
+    /* Reset & base */
     body {
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Open Sans', sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #fff;
-      color: #333;
+      background-color: #fefefe;
+      color: #222;
+      line-height: 1.6;
     }
+    a {
+      color: #6a1b9a;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    a:hover {
+      color: #4a148c;
+    }
+
+    /* Header */
     header {
-      background-color: #6a1b9a;
+      background: linear-gradient(135deg, #7b3fbf, #4a148c);
       color: white;
-      padding: 2rem;
+      padding: 3rem 1rem;
       text-align: center;
+      box-shadow: 0 4px 8px rgba(74,20,140,0.4);
     }
+    header h1 {
+      margin: 0 0 0.5rem 0;
+      font-weight: 700;
+      font-size: 2.8rem;
+      letter-spacing: 2px;
+    }
+    header p {
+      font-size: 1.2rem;
+      font-weight: 400;
+      margin: 0;
+    }
+
+    /* Navigation */
     nav {
       background-color: #4a148c;
-      padding: 1rem;
-      text-align: center;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem 0;
+      box-shadow: 0 2px 6px rgba(74,20,140,0.3);
     }
     nav a {
       color: white;
-      text-decoration: none;
-      margin: 0 15px;
       font-weight: 600;
+      font-size: 1.1rem;
+      padding: 0.25rem 0.5rem;
     }
+    nav a:hover,
+    nav a:focus {
+      border-bottom: 2px solid #b57edc;
+    }
+
+    /* Main content area */
+    main {
+      max-width: 900px;
+      margin: 2rem auto 4rem auto;
+      padding: 0 1rem;
+    }
+
     section {
-      padding: 2rem;
-      max-width: 1000px;
-      margin: auto;
-    }
-    .services, .testimonials, .contact, .blog {
-      background-color: #f9f9f9;
-      margin: 2rem 0;
+      background-color: white;
+      margin-bottom: 3rem;
+      padding: 2rem 2.5rem;
       border-radius: 10px;
-      padding: 2rem;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
     }
+    section h2 {
+      margin-top: 0;
+      color: #4a148c;
+      font-weight: 700;
+      font-size: 2rem;
+      border-bottom: 3px solid #b57edc;
+      padding-bottom: 0.3rem;
+      margin-bottom: 1.5rem;
+    }
+    section p {
+      font-size: 1.1rem;
+      color: #444;
+    }
+    ul {
+      list-style-type: disc;
+      padding-left: 1.25rem;
+      color: #555;
+      font-size: 1.1rem;
+    }
+    ul li {
+      margin-bottom: 0.8rem;
+    }
+
+    /* Testimonials */
     .testimonial {
       font-style: italic;
+      background-color: #f3e8ff;
+      padding: 1rem 1.5rem;
       margin-bottom: 1rem;
-    }
-    form input, form textarea, form button {
-      display: block;
-      width: 100%;
-      margin-bottom: 1rem;
-      padding: 0.75rem;
-      border: 1px solid #ccc;
+      border-left: 5px solid #6a1b9a;
       border-radius: 5px;
+      color: #4a148c;
     }
-    form button {
+
+    /* Contact form */
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    input, textarea {
+      padding: 0.85rem 1rem;
+      font-size: 1rem;
+      border: 1.8px solid #ccc;
+      border-radius: 6px;
+      transition: border-color 0.3s ease;
+      resize: vertical;
+    }
+    input:focus, textarea:focus {
+      outline: none;
+      border-color: #6a1b9a;
+      box-shadow: 0 0 5px rgba(106, 27, 154, 0.4);
+    }
+    button {
+      padding: 0.9rem;
       background-color: #6a1b9a;
-      color: white;
       border: none;
+      color: white;
+      font-weight: 700;
+      font-size: 1.1rem;
+      border-radius: 6px;
       cursor: pointer;
-      font-weight: 600;
+      transition: background-color 0.3s ease;
     }
+    button:hover, button:focus {
+      background-color: #4a148c;
+    }
+
+    /* Image styles */
+    .image-container {
+      margin-top: 1rem;
+      text-align: center;
+    }
+    .image-container img {
+      max-width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 5px 12px rgba(0,0,0,0.15);
+      height: auto;
+    }
+    .image-caption {
+      font-size: 0.9rem;
+      color: #666;
+      margin-top: 0.5rem;
+      font-style: italic;
+    }
+
+    /* Footer */
     footer {
       text-align: center;
-      padding: 1rem;
-      background-color: #eee;
+      padding: 1.2rem;
+      background-color: #e6e0f2;
+      color: #4a148c;
+      font-weight: 600;
+      font-size: 0.9rem;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.5);
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        gap: 1rem;
+      }
+      header h1 {
+        font-size: 2rem;
+      }
+      section {
+        padding: 1.5rem 1.5rem;
+      }
     }
   </style>
 </head>
@@ -82,42 +205,52 @@
     <a href="#blog">Blog</a>
   </nav>
 
-  <section id="mission">
-    <h2>My Mission</h2>
-    <p>At Elevate with Flo, I believe strength and conditioning should be part of your daily routine to support long-term health and confidence. Nutrition doesn’t have to be restrictive—it can be tailored to your needs while still enjoying a vibrant social life with friends and family. My mission is to help you feel strong, empowered, and confident in your own body—without missing out on life’s moments.</p>
-  </section>
+  <main>
+    <section id="mission">
+      <h2>My Mission</h2>
+      <p>At Elevate with Flo, I believe strength and conditioning should be part of your daily routine to support long-term health and confidence. Nutrition doesn’t have to be restrictive—it can be tailored to your needs while still enjoying a vibrant social life with friends and family. My mission is to help you feel strong, empowered, and confident in your own body—without missing out on life’s moments.</p>
+      <div class="image-container">
+        <img src="https://images.unsplash.com/photo-1598970434795-0c54fe7c0642?auto=format&fit=crop&w=900&q=80" alt="Strength training woman lifting weights" />
+        <div class="image-caption">Strength training empowers your body and mind.</div>
+      </div>
+    </section>
 
-  <section id="services" class="services">
-    <h2>Services</h2>
-    <ul>
-      <li><strong>Face-to-Face Coaching:</strong> Based at Innov8 Gym in Newry & Warrenpoint</li>
-      <li><strong>Online Coaching:</strong> Remote support with training and nutrition guidance</li>
-      <li><strong>Hybrid Coaching:</strong> Blending online convenience with in-person check-ins</li>
-    </ul>
-  </section>
+    <section id="services">
+      <h2>Services</h2>
+      <ul>
+        <li><strong>Face-to-Face Coaching:</strong> Based at Innov8 Gym in Newry & Warrenpoint</li>
+        <li><strong>Online Coaching:</strong> Remote support with training and nutrition guidance</li>
+        <li><strong>Hybrid Coaching:</strong> Blending online convenience with in-person check-ins</li>
+      </ul>
+      <div class="image-container">
+        <img src="https://images.unsplash.com/photo-1554284126-59b0d79a8b38?auto=format&fit=crop&w=900&q=80" alt="Personal training session" />
+        <div class="image-caption">Personal coaching tailored to your goals.</div>
+      </div>
+    </section>
 
-  <section id="testimonials" class="testimonials">
-    <h2>What My Clients Say</h2>
-    <p class="testimonial">"Training has never been so enjoyable."</p>
-    <p class="testimonial">"Results can be seen and I am enjoying the process."</p>
-    <p class="testimonial">"I have never been able to stick to any training before, but I have lost 2 stone so far. It is all down to you!"</p>
-  </section>
+    <section id="testimonials">
+      <h2>What My Clients Say</h2>
+      <p class="testimonial">"Training has never been so enjoyable."</p>
+      <p class="testimonial">"Results can be seen and I am enjoying the process."</p>
+      <p class="testimonial">"I have never been able to stick to any training before, but I have lost 2 stone so far. It is all down to you!"</p>
+    </section>
 
-  <section id="contact" class="contact">
-    <h2>Contact Me / Book a Discovery Call</h2>
-    <p><a href="https://calendly.com/fola-elevatewithflo/30min" target="_blank" rel="noopener noreferrer">Click here to book a 30-minute Discovery Call</a></p>
-    <form action="https://formspree.io/f/mnnvljee" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <textarea name="message" placeholder="Your Message or Query" required></textarea>
-      <button type="submit">Submit</button>
-    </form>
-  </section>
+    <section id="contact">
+      <h2>Contact Me / Book a Discovery Call</h2>
+      <p><a href="https://calendly.com/fola-elevatewithflo/30min" target="_blank" rel="noopener noreferrer">Click here to book a 30-minute Discovery Call</a></p>
+      <form action="https://formspree.io/f/mnnvljee" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Your Message or Query" required rows="5"></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </section>
 
-  <section id="blog" class="blog">
-    <h2>Blog</h2>
-    <p>Coming soon: Real-life tips on balancing fitness, nutrition, and motherhood. Planning is key and I’ll be sharing what works!</p>
-  </section>
+    <section id="blog">
+      <h2>Blog</h2>
+      <p>Coming soon: Real-life tips on balancing fitness, nutrition, and motherhood. Planning is key and I’ll be sharing what works!</p>
+    </section>
+  </main>
 
   <footer>
     <p>© 2025 Elevate with Flo | Designed with love and strength</p>
